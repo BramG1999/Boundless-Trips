@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Plan a European adventure around your budget with Boundless Trips."
+  >
+  <title>Boundless Trips — One budget. Endless routes.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Boundless Trips home">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span>Boundless <strong>Trips</strong></span>
+    </a>
+    <p class="header-tagline">One budget. Endless routes.</p>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true"></span> A new way to get away</p>
+        <h1 id="hero-title">Don't pick a destination.<br><span>Pick a budget.</span></h1>
+        <p class="hero-description">
+          Tell us where you start, when you're free and what you want to spend.
+          We'll show you where you can go.
+        </p>
+
+        <div class="route-note" aria-label="Trains and flights, multiple cities, one smart route">
+          <span>Trains + flights</span>
+          <span class="note-divider" aria-hidden="true"></span>
+          <span>Multiple cities</span>
+          <span class="note-divider" aria-hidden="true"></span>
+          <span>One smart route</span>
+        </div>
+      </div>
+
+      <div class="search-card">
+        <div class="card-heading">
+          <div>
+            <p class="eyebrow">Your next adventure</p>
+            <h2>Start with the details</h2>
+          </div>
+          <span class="card-spark" aria-hidden="true">✳</span>
+        </div>
+
+        <form id="trip-search-form">
+          <div class="form-field">
+            <label for="departure">Departing from</label>
+            <div class="input-wrap">
+              <span class="field-icon" aria-hidden="true">↗</span>
+              <input
+                id="departure"
+                name="departure"
+                type="text"
+                placeholder="e.g. Amsterdam"
+                autocomplete="address-level2"
+                required
+              >
+            </div>
+          </div>
+
+          <fieldset class="form-field date-field">
+            <legend>Travel dates</legend>
+            <div class="date-inputs">
+              <div class="input-wrap">
+                <label class="visually-hidden" for="date-from">Departure date</label>
+                <input id="date-from" name="dateFrom" type="date" required>
+              </div>
+              <span class="date-arrow" aria-hidden="true">→</span>
+              <div class="input-wrap">
+                <label class="visually-hidden" for="date-to">Return date</label>
+                <input id="date-to" name="dateTo" type="date" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-row">
+            <div class="form-field budget-field">
+              <label for="budget">Max transport budget</label>
+              <div class="input-wrap budget-wrap">
+                <span class="currency" aria-hidden="true">€</span>
+                <input
+                  id="budget"
+                  name="budget"
+                  type="number"
+                  min="1"
+                  step="1"
+                  placeholder="300"
+                  inputmode="numeric"
+                  required
+                >
+                <span class="per-person">per person</span>
+              </div>
+            </div>
+
+            <div class="form-field travellers-field">
+              <label for="travellers">Travellers</label>
+              <div class="traveller-control">
+                <button
+                  class="count-button"
+                  id="decrease-travellers"
+                  type="button"
+                  aria-label="Remove one traveller"
+                >−</button>
+                <output id="traveller-count" for="travellers" aria-live="polite">2</output>
+                <input id="travellers" name="travellers" type="hidden" value="2">
+                <button
+                  class="count-button"
+                  id="increase-travellers"
+                  type="button"
+                  aria-label="Add one traveller"
+                >+</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="submit-button" type="submit">
+            Show me where I can go
+            <span aria-hidden="true">↗</span>
+          </button>
+
+          <p class="form-footnote">No destination in mind? That's the whole point.</p>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="hero-decoration" aria-hidden="true">
+        <span class="orbit orbit-one"></span>
+        <span class="orbit orbit-two"></span>
+        <span class="sun"></span>
+        <span class="decoration-label">GO<br>YOUR<br>OWN WAY</span>
+      </div>
+    </section>
+
+    <section class="steps-section" aria-labelledby="steps-title">
+      <div class="steps-intro">
+        <p class="eyebrow">Adventure, your way</p>
+        <h2 id="steps-title">A little less planning.<br><span>A lot more possibility.</span></h2>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">01</span>
+          <span class="step-icon" aria-hidden="true">€</span>
+          <h3>Set your budget</h3>
+          <p>Pick what you want to spend on getting there. You’re in control from the start.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">02</span>
+          <span class="step-icon route-icon" aria-hidden="true">↗</span>
+          <h3>We find the routes</h3>
+          <p>Discover clever train and flight combinations across more than one city.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">03</span>
+          <span class="step-icon" aria-hidden="true">✳</span>
+          <h3>You choose the adventure</h3>
+          <p>See what fits, follow your curiosity and make the trip your own.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#" aria-label="Boundless Trips home">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span>Boundless <strong>Trips</strong></span>
+    </a>
+    <p>One budget. Endless routes.</p>
+  </footer>
+</body>
+</html>
